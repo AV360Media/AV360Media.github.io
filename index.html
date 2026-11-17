@@ -36,7 +36,7 @@ a{color:inherit}
 .label{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 16px}
 
 /* navy band holding header + hero */
-.band{background:var(--navy);color:#fff;padding-bottom:280px}
+.band{background:var(--navy);color:#fff;padding-bottom:220px}
 header.top{padding:28px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .nav img{height:40px;width:auto}
@@ -56,8 +56,17 @@ header.top{padding:28px 0}
 .btn-line{border:1px solid rgba(255,255,255,.3);color:#fff}
 .btn-line:hover{border-color:#fff}
 
-.feature{margin:-280px 0 0;position:relative}
-.feature .pattern{display:block;width:100%;height:auto;aspect-ratio:21/9;box-shadow:0 2px 4px rgba(11,31,77,.06),0 18px 36px -12px rgba(11,31,77,.35),0 48px 96px -24px rgba(11,31,77,.45);border-radius:10px}
+.feature{margin:-220px 0 0;position:relative}
+.mosaic{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:clamp(64px,9.2vw,124px);grid-auto-flow:dense;gap:6px;padding:6px;background:#0A1633;border-radius:12px;box-shadow:0 2px 4px rgba(11,31,77,.06),0 18px 36px -12px rgba(11,31,77,.35),0 48px 96px -24px rgba(11,31,77,.45)}
+.mosaic .m{all:unset;position:relative;display:block;overflow:hidden;border-radius:6px;cursor:zoom-in;background:#13224A}
+.mosaic .m:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.mosaic .m.big{grid-column:span 2;grid-row:span 2}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.mosaic .m:hover img{transform:scale(1.05)}
+.mosaic .ml{position:absolute;left:6px;bottom:6px;font-size:11px;line-height:1;padding:5px 7px;border-radius:4px;background:rgba(6,13,31,.72);color:#fff;white-space:nowrap}
+.mosaic .big .ml{font-size:13px;left:10px;bottom:10px;padding:6px 9px}
+.mosaic .logo{display:flex;align-items:center;justify-content:center;background:var(--navy);border-radius:6px}
+.mosaic .logo img{width:52%;height:auto;object-fit:contain}
 
 .feature figcaption{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:12px}
 
@@ -135,7 +144,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .nav ul{gap:20px}
   .nav ul li:nth-child(-n+2){display:none}
   .hero{padding-top:40px}
-  .feature .pattern{aspect-ratio:4/3}
+  .mosaic{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:88px;gap:4px;padding:4px}
+  .mosaic .ml{display:none}
   .band{padding-bottom:140px}.feature{margin-top:-140px}
   .facts{grid-template-columns:1fr}
   .facts li{padding:20px 0;border-bottom:1px solid var(--line)}
@@ -179,7 +189,23 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <main id="main">
   <div class="wrap">
     <figure class="feature">
-      <svg class="pattern" viewBox="0 0 1176 504" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract pattern of circles and half circles in AV360 Media brand colors"><rect x="0" y="0" width="168" height="168" fill="#3EC6F7"/><path d="M168 168 H0 A168 168 0 0 1 168 0 Z" fill="#0B1F4D"/><rect x="168" y="0" width="168" height="168" fill="#DCE6F5"/><path d="M336 168 H168 A168 168 0 0 1 336 0 Z" fill="#1672E6"/><rect x="336" y="0" width="168" height="168" fill="#3EC6F7"/><path d="M504 168 H336 A84.0 84.0 0 0 1 504 168 Z" fill="#0B1F4D"/><rect x="504" y="0" width="168" height="168" fill="#1672E6"/><circle cx="588.0" cy="84.0" r="84.0" fill="#FFFFFF"/><rect x="672" y="0" width="168" height="168" fill="#3EC6F7"/><path d="M672 168 V0 A168 168 0 0 1 840 168 Z" fill="#0B1F4D"/><rect x="840" y="0" width="168" height="168" fill="#FFFFFF"/><path d="M840 168 V0 A84.0 84.0 0 0 1 840 168 Z" fill="#1672E6"/><rect x="1008" y="0" width="168" height="168" fill="#DCE6F5"/><circle cx="1092.0" cy="84.0" r="30.24" fill="#0B1F4D"/><rect x="0" y="168" width="168" height="168" fill="#DCE6F5"/><path d="M168 168 V336 A84.0 84.0 0 0 1 168 168 Z" fill="#0B1F4D"/><rect x="168" y="168" width="168" height="168" fill="#DCE6F5"/><circle cx="252.0" cy="252.0" r="84.0" fill="#0B1F4D"/><rect x="336" y="168" width="168" height="168" fill="#1672E6"/><path d="M336 168 H504 A168 168 0 0 1 336 336 Z" fill="#FFFFFF"/><rect x="504" y="168" width="168" height="168" fill="#FFFFFF"/><path d="M582.0 186.0 A66.0 66.0 0 0 0 582.0 318.0 Z" fill="#0B1F4D"/><path d="M594.0 186.0 A66.0 66.0 0 0 1 594.0 318.0 Z" fill="#1672E6"/><rect x="672" y="168" width="168" height="168" fill="#0B1F4D"/><circle cx="756.0" cy="252.0" r="70.0" fill="none" stroke="#1672E6" stroke-width="28"/><rect x="840" y="168" width="168" height="168" fill="#3EC6F7"/><path d="M1008 336 H840 A84.0 84.0 0 0 1 1008 336 Z" fill="#0B1F4D"/><rect x="1008" y="168" width="168" height="168" fill="#0B1F4D"/><path d="M1176 168 V336 A168 168 0 0 1 1008 168 Z" fill="#1672E6"/><rect x="0" y="336" width="168" height="168" fill="#1672E6"/><path d="M168 336 V504 A168 168 0 0 1 0 336 Z" fill="#DCE6F5"/><rect x="168" y="336" width="168" height="168" fill="#FFFFFF"/><path d="M336 504 H168 A84.0 84.0 0 0 1 336 504 Z" fill="#1672E6"/><rect x="336" y="336" width="168" height="168" fill="#0B1F4D"/><path d="M336 336 V504 A84.0 84.0 0 0 0 336 336 Z" fill="#3EC6F7"/><path d="M504 336 V504 A84.0 84.0 0 0 1 504 336 Z" fill="#3EC6F7"/><rect x="504" y="336" width="168" height="168" fill="#DCE6F5"/><path d="M504 336 H672 A84.0 84.0 0 0 1 504 336 Z" fill="#0B1F4D"/><rect x="672" y="336" width="168" height="168" fill="#0B1F4D"/><path d="M672 504 V336 A84.0 84.0 0 0 1 672 504 Z" fill="#FFFFFF"/><rect x="840" y="336" width="168" height="168" fill="#DCE6F5"/><circle cx="924.0" cy="420.0" r="84.0" fill="#1672E6"/><rect x="1008" y="336" width="168" height="168" fill="#0B1F4D"/><path d="M1008 336 H1176 A168 168 0 0 1 1008 504 Z" fill="#3EC6F7"/></svg>
+      <div class="mosaic">
+        <button type="button" class="m big" aria-label="View larger: LED dance floor and video walls at an evening event, Scottsdale, AZ"><img src="assets/work/work-01-sm.jpg" data-full="assets/work/work-01.jpg" data-city="Scottsdale, AZ" alt="LED dance floor and video walls at an evening event" width="800" height="450"><span class="ml">Scottsdale, AZ</span></button>
+        <button type="button" class="m" aria-label="View larger: Stage with a center LED wall and side screens under colored ceiling lighting, Nassau, Bahamas"><img src="assets/work/work-02-sm.jpg" data-full="assets/work/work-02.jpg" data-city="Nassau, Bahamas" alt="Stage with a center LED wall and side screens under colored ceiling lighting" width="800" height="450"><span class="ml">Nassau, Bahamas</span></button>
+        <button type="button" class="m" aria-label="View larger: Arena concert stage with line arrays and an LED screen, Fresno, CA"><img src="assets/work/work-13-sm.jpg" data-full="assets/work/work-13.jpg" data-city="Fresno, CA" alt="Arena concert stage with line arrays and an LED screen" width="800" height="450"><span class="ml">Fresno, CA</span></button>
+        <button type="button" class="m" aria-label="View larger: Show control position with switcher and monitors facing the stage screen, Huntington Beach, CA"><img src="assets/work/work-03-sm.jpg" data-full="assets/work/work-03.jpg" data-city="Huntington Beach, CA" alt="Show control position with switcher and monitors facing the stage screen" width="800" height="450"><span class="ml">Huntington Beach, CA</span></button>
+        <button type="button" class="m" aria-label="View larger: Wide LED wall stage in a dark ballroom, Dallas, TX"><img src="assets/work/work-04-sm.jpg" data-full="assets/work/work-04.jpg" data-city="Dallas, TX" alt="Wide LED wall stage in a dark ballroom" width="800" height="450"><span class="ml">Dallas, TX</span></button>
+        <button type="button" class="m" aria-label="View larger: Three LED walls with moving light beams over a gala room, Aurora, CO"><img src="assets/work/work-05-sm.jpg" data-full="assets/work/work-05.jpg" data-city="Aurora, CO" alt="Three LED walls with moving light beams over a gala room" width="800" height="450"><span class="ml">Aurora, CO</span></button>
+        <button type="button" class="m" aria-label="View larger: Curved projection screens on a ballroom stage, Salt Lake City, UT"><img src="assets/work/work-06-sm.jpg" data-full="assets/work/work-06.jpg" data-city="Salt Lake City, UT" alt="Curved projection screens on a ballroom stage" width="800" height="450"><span class="ml">Salt Lake City, UT</span></button>
+        <div class="logo" aria-hidden="true"><img src="assets/icon-reversed.svg" alt=""></div>
+        <button type="button" class="m" aria-label="View larger: Long LED wall spanning a ballroom, Nassau, Bahamas"><img src="assets/work/work-07-sm.jpg" data-full="assets/work/work-07.jpg" data-city="Nassau, Bahamas" alt="Long LED wall spanning a ballroom" width="800" height="450"><span class="ml">Nassau, Bahamas</span></button>
+        <button type="button" class="m" aria-label="View larger: General session with a center stage and side screens, Orlando, FL"><img src="assets/work/work-08-sm.jpg" data-full="assets/work/work-08.jpg" data-city="Orlando, FL" alt="General session with a center stage and side screens" width="800" height="450"><span class="ml">Orlando, FL</span></button>
+        <button type="button" class="m" aria-label="View larger: Gala ballroom with LED walls and IMAG screens, Mesa, AZ"><img src="assets/work/work-14-sm.jpg" data-full="assets/work/work-14.jpg" data-city="Mesa, AZ" alt="Gala ballroom with LED walls and IMAG screens" width="800" height="450"><span class="ml">Mesa, AZ</span></button>
+        <button type="button" class="m" aria-label="View larger: General session with an LED wall and overhead lighting rig, Boca Raton, FL"><img src="assets/work/work-09-sm.jpg" data-full="assets/work/work-09.jpg" data-city="Boca Raton, FL" alt="General session with an LED wall and overhead lighting rig" width="800" height="450"><span class="ml">Boca Raton, FL</span></button>
+        <button type="button" class="m" aria-label="View larger: Video operator desk with multiviewers and playback system, Huntington Beach, CA"><img src="assets/work/work-10-sm.jpg" data-full="assets/work/work-10.jpg" data-city="Huntington Beach, CA" alt="Video operator desk with multiviewers and playback system" width="800" height="450"><span class="ml">Huntington Beach, CA</span></button>
+        <button type="button" class="m" aria-label="View larger: Tech table at the back of a full general session, New Brunswick, NJ"><img src="assets/work/work-11-sm.jpg" data-full="assets/work/work-11.jpg" data-city="New Brunswick, NJ" alt="Tech table at the back of a full general session" width="800" height="450"><span class="ml">New Brunswick, NJ</span></button>
+        <button type="button" class="m" aria-label="View larger: Presentation in a glass-walled event space with city views, Chicago, IL"><img src="assets/work/work-12-sm.jpg" data-full="assets/work/work-12.jpg" data-city="Chicago, IL" alt="Presentation in a glass-walled event space with city views" width="800" height="450"><span class="ml">Chicago, IL</span></button>
+      </div>
     </figure>
     <ul class="facts">
       <li><strong>10+ years</strong><span>in live events</span></li>
@@ -279,10 +305,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <script>
 (function(){
-  var btns=[].slice.call(document.querySelectorAll('.gallery button'));
-  var dlg=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cnt=document.getElementById('lb-count'),cur=0;
-  function show(i){cur=(i+btns.length)%btns.length;var t=btns[cur].querySelector('img');img.src=t.dataset.full;img.alt=t.alt;cnt.textContent=t.dataset.city+'  ·  '+(cur+1)+' of '+btns.length;}
-  btns.forEach(function(b,i){b.addEventListener('click',function(){show(i);dlg.showModal();});});
+  var dlg=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cnt=document.getElementById('lb-count'),cur=0,btns=[];
+  function show(i){cur=(i+btns.length)%btns.length;var t=btns[cur].querySelector('img');img.src=t.dataset.full;img.alt=t.alt;cnt.textContent=t.dataset.city+'  \u00b7  '+(cur+1)+' of '+btns.length;}
+  ['.mosaic button.m','.gallery button'].forEach(function(sel){
+    var set=[].slice.call(document.querySelectorAll(sel));
+    set.forEach(function(b,k){b.addEventListener('click',function(){btns=set;show(k);dlg.showModal();});});
+  });
   dlg.querySelector('.lb-close').addEventListener('click',function(){dlg.close();});
   dlg.querySelector('.lb-prev').addEventListener('click',function(){show(cur-1);});
   dlg.querySelector('.lb-next').addEventListener('click',function(){show(cur+1);});
