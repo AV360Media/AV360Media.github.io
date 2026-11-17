@@ -80,8 +80,8 @@ header.top{position:sticky;top:0;z-index:40;background:rgba(6,13,31,.78);backdro
 .mv-tile.pgm .lbl i{background:var(--pgm)}
 .mv-tile.pvw .lbl i{background:var(--pvw);color:#03220F}
 .meters{display:flex;gap:3px;align-items:flex-end;height:22px;margin:12px 4px 2px}
-.meters span{flex:1;height:100%;background:linear-gradient(to top,var(--pvw) 0 60%,#E9D44A 60% 85%,var(--pgm) 85%);border-radius:1px;transform-origin:bottom;animation:meter 1.1s ease-in-out infinite alternate;opacity:.85}
-@keyframes meter{0%{transform:scaleY(.25)}100%{transform:scaleY(1)}}
+.meters span{flex:1;height:100%;background:linear-gradient(to top,var(--pvw) 0 60%,#E9D44A 60% 85%,var(--pgm) 85%) bottom/100% 22px no-repeat;border-radius:1px;animation:meter 1.1s ease-in-out infinite alternate;opacity:.85}
+@keyframes meter{0%{height:20%}55%{height:62%}100%{height:92%}}
 
 .stats{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:72px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats li{list-style:none;padding:26px 0 26px 24px;border-left:1px solid var(--line)}
