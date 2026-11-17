@@ -70,6 +70,7 @@ h2{font-size:clamp(28px,3.2vw,40px);line-height:1.15;font-weight:700;letter-spac
 .card p{margin:0;color:var(--muted);font-size:15.5px}
 
 .about{background:var(--bg-soft)}
+.about-white{background:var(--white)}
 .about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:64px;align-items:center}
 .about-grid img{width:min(320px,100%);margin:0 auto}
 .about p{font-size:17px;color:var(--muted);margin:0 0 18px}
@@ -88,6 +89,23 @@ h2{font-size:clamp(28px,3.2vw,40px);line-height:1.15;font-weight:700;letter-spac
 footer{background:#081639;color:#9FB0CC;font-size:14px;padding:28px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
+
+/* work gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.gallery button{all:unset;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#0B1F4D;position:relative}
+.gallery button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.gallery button:hover img{transform:scale(1.04)}
+.lightbox{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh}
+.lightbox::backdrop{background:rgba(5,12,30,.92)}
+.lb-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+.lb-inner img{max-width:92vw;max-height:84vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-btn{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:0;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.lb-btn:hover{background:rgba(255,255,255,.24)}
+.lb-btn svg{width:22px;height:22px}
+.lb-close{top:20px;right:20px}.lb-prev{left:20px;top:50%;transform:translateY(-50%)}.lb-next{right:20px;top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#C9D3E3;font-size:14px}
+
 @media (max-width:800px){
   .about-grid{grid-template-columns:1fr;gap:40px}
   section{padding:72px 0}
@@ -105,6 +123,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <nav aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -158,7 +177,31 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </section>
 
-  <section id="about" class="about" aria-labelledby="about-title">
+  <section id="work" class="about" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Recent work</p>
+        <h2 id="work-title">On site</h2>
+        <p>A few of the stages, LED walls and control positions from recent shows.</p>
+      </div>
+      <div class="gallery">
+        <button type="button" data-i="0" aria-label="View larger: LED dance floor and video walls at an evening event"><img src="assets/work/work-01-sm.jpg" data-full="assets/work/work-01.jpg" alt="LED dance floor and video walls at an evening event" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="1" aria-label="View larger: Stage with a center LED wall and side screens under colored ceiling lighting"><img src="assets/work/work-02-sm.jpg" data-full="assets/work/work-02.jpg" alt="Stage with a center LED wall and side screens under colored ceiling lighting" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="2" aria-label="View larger: Show control position with switcher and monitors facing the stage screen"><img src="assets/work/work-03-sm.jpg" data-full="assets/work/work-03.jpg" alt="Show control position with switcher and monitors facing the stage screen" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="3" aria-label="View larger: Wide LED wall stage in a dark ballroom"><img src="assets/work/work-04-sm.jpg" data-full="assets/work/work-04.jpg" alt="Wide LED wall stage in a dark ballroom" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="4" aria-label="View larger: Three LED walls with moving light beams over a gala room"><img src="assets/work/work-05-sm.jpg" data-full="assets/work/work-05.jpg" alt="Three LED walls with moving light beams over a gala room" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="5" aria-label="View larger: Curved projection screens on a ballroom stage"><img src="assets/work/work-06-sm.jpg" data-full="assets/work/work-06.jpg" alt="Curved projection screens on a ballroom stage" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="6" aria-label="View larger: Long LED wall spanning a ballroom"><img src="assets/work/work-07-sm.jpg" data-full="assets/work/work-07.jpg" alt="Long LED wall spanning a ballroom" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="7" aria-label="View larger: General session with a center stage and side screens"><img src="assets/work/work-08-sm.jpg" data-full="assets/work/work-08.jpg" alt="General session with a center stage and side screens" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="8" aria-label="View larger: General session with an LED wall and overhead lighting rig"><img src="assets/work/work-09-sm.jpg" data-full="assets/work/work-09.jpg" alt="General session with an LED wall and overhead lighting rig" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="9" aria-label="View larger: Video operator desk with multiviewers and playback system"><img src="assets/work/work-10-sm.jpg" data-full="assets/work/work-10.jpg" alt="Video operator desk with multiviewers and playback system" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="10" aria-label="View larger: Tech table at the back of a full general session"><img src="assets/work/work-11-sm.jpg" data-full="assets/work/work-11.jpg" alt="Tech table at the back of a full general session" loading="lazy" width="800" height="450"></button>
+        <button type="button" data-i="11" aria-label="View larger: Presentation in a glass-walled event space with city views"><img src="assets/work/work-12-sm.jpg" data-full="assets/work/work-12.jpg" alt="Presentation in a glass-walled event space with city views" loading="lazy" width="800" height="450"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about about-white" aria-labelledby="about-title">
     <div class="wrap about-grid">
       <img src="assets/icon.svg" alt="" width="320" height="320">
       <div>
@@ -192,6 +235,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <span>Gilbert, Arizona</span>
   </div>
 </footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-inner">
+    <img id="lb-img" src="" alt="">
+    <button class="lb-btn lb-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="lb-btn lb-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+    <p class="lb-count" id="lb-count"></p>
+  </div>
+</dialog>
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.gallery button'));
+  var dlg=document.getElementById('lightbox'),img=document.getElementById('lb-img'),cnt=document.getElementById('lb-count'),cur=0;
+  function show(i){cur=(i+btns.length)%btns.length;var t=btns[cur].querySelector('img');img.src=t.dataset.full;img.alt=t.alt;cnt.textContent=(cur+1)+' / '+btns.length;}
+  btns.forEach(function(b,i){b.addEventListener('click',function(){show(i);dlg.showModal();});});
+  dlg.querySelector('.lb-close').addEventListener('click',function(){dlg.close();});
+  dlg.querySelector('.lb-prev').addEventListener('click',function(){show(cur-1);});
+  dlg.querySelector('.lb-next').addEventListener('click',function(){show(cur+1);});
+  dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.classList.contains('lb-inner'))dlg.close();});
+  dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
