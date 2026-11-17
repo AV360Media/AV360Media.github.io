@@ -106,6 +106,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .lb-close{top:20px;right:20px}.lb-prev{left:20px;top:50%;transform:translateY(-50%)}.lb-next{right:20px;top:50%;transform:translateY(-50%)}
 .lb-count{position:absolute;bottom:22px;left:0;right:0;text-align:center;color:#C9D3E3;font-size:14px}
 
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:#FFFFFF;color:var(--navy);border-radius:10px;padding:14px 20px;font-size:15px;box-shadow:0 12px 32px rgba(11,31,77,.28);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast strong{font-weight:600}
+
 @media (max-width:800px){
   .about-grid{grid-template-columns:1fr;gap:40px}
   section{padding:72px 0}
@@ -138,7 +143,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h1>Live event AV, from planning to show call.</h1>
       <p class="lead">AV360 Media is the independent production company of Bryan Horton, providing audio visual production, high-end video operation and project management for live events.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="mailto:bhorton@av360media.com">
+        <a class="btn btn-primary js-mail" href="mailto:bhorton@av360media.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           Email Bryan
         </a>
@@ -221,7 +226,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <p>Reach out with your dates, venue and what you need, and Bryan will get back to you.</p>
       </div>
       <ul class="contact-list">
-        <li><span class="label">Email</span><a href="mailto:bhorton@av360media.com">bhorton@av360media.com</a></li>
+        <li><span class="label">Email</span><a class="js-mail" href="mailto:bhorton@av360media.com">bhorton@av360media.com</a></li>
         <li><span class="label">Phone</span><a href="tel:+14805329044">(480) 532-9044</a></li>
         <li><span class="label">Based in</span><span class="val">Gilbert, Arizona</span></li>
       </ul>
@@ -256,6 +261,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   dlg.querySelector('.lb-next').addEventListener('click',function(){show(cur+1);});
   dlg.addEventListener('click',function(e){if(e.target===dlg||e.target.classList.contains('lb-inner'))dlg.close();});
   dlg.addEventListener('keydown',function(e){if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1);});
+})();
+</script>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var t=document.getElementById('toast'),timer;
+  function note(msg){t.innerHTML=msg;t.classList.add('show');clearTimeout(timer);timer=setTimeout(function(){t.classList.remove('show');},6000);}
+  [].forEach.call(document.querySelectorAll('.js-mail'),function(a){
+    a.addEventListener('click',function(){
+      var addr='bhorton@av360media.com';
+      function done(copied){note((copied?'Email address copied: ':'Email: ')+'<strong>'+addr+'</strong>'+(copied?'<br>Paste it into your email app if it didn\u2019t open.':''));}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(function(){done(true);},function(){done(false);});}else{done(false);}
+    });
+  });
 })();
 </script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
