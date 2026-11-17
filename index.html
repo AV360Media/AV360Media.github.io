@@ -10,7 +10,7 @@
 <meta property="og:image" content="https://av360media.com/assets/og-image.png">
 <meta property="og:url" content="https://av360media.com/">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#F7F7F5">
+<meta name="theme-color" content="#0B1F4D">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -35,25 +35,29 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .label{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 16px}
 
+/* navy band holding header + hero */
+.band{background:var(--navy);color:#fff;padding-bottom:280px}
 header.top{padding:28px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .nav img{height:40px;width:auto}
 .nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0}
-.nav a{text-decoration:none;font-size:15px;color:var(--ink-2)}
-.nav a:hover{color:var(--ink)}
+.nav a{text-decoration:none;font-size:15px;color:#C2CBDB}
+.nav a:hover{color:#fff}
 
-.hero{padding:72px 0 56px}
+.hero{padding:72px 0 72px}
 .hero h1{font-size:clamp(40px,5.6vw,76px);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin:0;max-width:19ch}
 .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:40px;flex-wrap:wrap}
-.hero-foot p{margin:0;max-width:46ch;color:var(--ink-2);font-size:18px}
+.hero-foot p{margin:0;max-width:46ch;color:#C2CBDB;font-size:18px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{box-shadow:0 6px 18px -8px rgba(0,0,0,.45)}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
-.btn-dark{background:var(--ink);color:#fff}
-.btn-dark:hover{background:var(--navy)}
-.btn-line{border:1px solid #C9CBC6;color:var(--ink)}
-.btn-line:hover{border-color:var(--ink)}
+.btn-dark{background:#fff;color:var(--navy)}
+.btn-dark:hover{background:#E3E9F4}
+.btn-line{border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn-line:hover{border-color:#fff}
 
-.feature{margin:0}
+.feature{margin:-280px 0 0;position:relative}
+.feature img{box-shadow:0 2px 4px rgba(11,31,77,.06),0 18px 36px -12px rgba(11,31,77,.35),0 48px 96px -24px rgba(11,31,77,.45);border-radius:10px}
 .feature img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:center 42%;border-radius:6px}
 .feature figcaption{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:12px}
 
@@ -72,11 +76,17 @@ h2{font-size:clamp(30px,3.4vw,44px);line-height:1.1;font-weight:500;letter-spaci
 .svc p{margin:0;color:var(--ink-2)}
 .svc-note{margin:28px 0 0;color:var(--muted);font-size:15px}
 
+#work{background:var(--ink);color:#fff;margin-top:128px;padding:112px 0 120px}
+#work h2{color:#fff}
+#work .work-head p{color:#9AA4B8}
+#work .shot button{background:#1A2336}
+#work .shot figcaption{color:#9AA4B8}
 .work-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:40px;flex-wrap:wrap}
 .work-head p{margin:0;color:var(--muted);max-width:40ch}
 .gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 24px}
 .shot{margin:0}
-.shot button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:6px;overflow:hidden;background:#E9EAE6}
+.shot button{all:unset;display:block;width:100%;cursor:zoom-in;border-radius:8px;overflow:hidden;background:#E9EAE6;box-shadow:0 1px 2px rgba(0,0,0,.2),0 16px 32px -14px rgba(0,0,0,.65);transition:transform .35s ease,box-shadow .35s ease}
+.shot button:hover{transform:translateY(-4px);box-shadow:0 2px 4px rgba(0,0,0,.25),0 28px 48px -16px rgba(0,0,0,.75)}
 .shot button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .shot img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .5s ease}
 .shot button:hover img{transform:scale(1.03)}
@@ -86,7 +96,8 @@ h2{font-size:clamp(30px,3.4vw,44px);line-height:1.1;font-weight:500;letter-spaci
 .about p.big{font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:var(--ink);letter-spacing:-.015em}
 
 .contact{padding:128px 0 120px}
-.contact-box{background:var(--navy);color:#fff;border-radius:10px;padding:72px 64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:end}
+#about{padding-top:120px}
+.contact-box{background:var(--navy);color:#fff;border-radius:12px;box-shadow:0 24px 60px -28px rgba(11,31,77,.55);padding:72px 64px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:end}
 .contact-box h2{color:#fff;font-size:clamp(32px,4vw,52px)}
 .contact-box p{color:#C2CBDB;margin:20px 0 0;max-width:42ch}
 .contact-list{list-style:none;margin:0;padding:0}
@@ -116,6 +127,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
   .contact-box{padding:48px 32px}
   section{padding-top:96px}
+  .band{padding-bottom:180px}.feature{margin-top:-180px}
+  #work{margin-top:96px;padding:88px 0}
 }
 @media (max-width:600px){
   .wrap{padding-left:20px;padding-right:20px}
@@ -123,18 +136,21 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .nav ul li:nth-child(-n+2){display:none}
   .hero{padding-top:40px}
   .feature img{aspect-ratio:4/3}
+  .band{padding-bottom:140px}.feature{margin-top:-140px}
   .facts{grid-template-columns:1fr}
   .facts li{padding:20px 0;border-bottom:1px solid var(--line)}
   .gallery{grid-template-columns:1fr}
 }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
+<div class="band">
 <header class="top">
   <div class="wrap nav">
-    <a href="./" aria-label="AV360 Media home"><img src="assets/logo.svg" alt="AV360 Media" width="120" height="40"></a>
+    <a href="./" aria-label="AV360 Media home"><img src="assets/logo-reversed.svg" alt="AV360 Media" width="120" height="40"></a>
     <nav aria-label="Main">
       <ul>
         <li><a href="#services">Services</a></li>
@@ -146,7 +162,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </header>
 
-<main id="main">
   <div class="hero">
     <div class="wrap">
       <h1>Freelance AV operator and producer for live events.</h1>
@@ -159,7 +174,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
     </div>
   </div>
+</div>
 
+<main id="main">
   <div class="wrap">
     <figure class="feature">
       <img src="assets/work/work-04.jpg" alt="Wide LED wall stage in a dark ballroom" width="1800" height="771">
