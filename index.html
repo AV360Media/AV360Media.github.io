@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AV360 Media | Live Event Audio Visual Production</title>
+<meta name="description" content="AV360 Media provides audio visual production, high-end video operation and project management for corporate meetings, conferences and live events.">
+<meta property="og:title" content="AV360 Media | Live Event Audio Visual Production">
+<meta property="og:description" content="Audio visual production, high-end video operation and project management for live events.">
+<meta property="og:image" content="https://av360media.com/assets/og-image.png">
+<meta property="og:url" content="https://av360media.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B1F4D">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F4D;--navy-2:#0F2860;--blue:#1672E6;--cyan:#3EC6F7;--slate:#56627A;
+  --ink:#1B2333;--muted:#4A5568;--line:#DDE3EB;--bg-soft:#F3F5F8;--white:#FFFFFF;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Sora,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+a:hover{color:var(--navy)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);color:var(--navy);padding:12px 16px;z-index:10}
+.skip:focus{left:16px;top:16px}
+
+/* header */
+.top{background:var(--navy)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;flex-wrap:wrap}
+.nav img{height:44px;width:auto}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:#C9D3E3;text-decoration:none;font-size:15px;font-weight:400}
+.nav ul a:hover{color:var(--white)}
+
+/* hero */
+.hero{background:var(--navy);color:var(--white);padding:72px 0 104px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin:0 0 18px}
+.hero h1{font-size:clamp(36px,5.4vw,64px);line-height:1.08;font-weight:700;letter-spacing:-.02em;margin:0 0 24px;max-width:15ch}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);font-weight:300;color:#D5DDEA;max-width:60ch;margin:0 0 40px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 24px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.btn svg{width:18px;height:18px}
+.btn-primary{background:var(--blue);color:var(--white)}
+.btn-primary:hover{background:#0F5FC4;color:var(--white)}
+.btn-ghost{border:1.5px solid #3A5285;color:var(--white)}
+.btn-ghost:hover{border-color:var(--white);color:var(--white)}
+
+/* sections */
+section{padding:96px 0}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head .eyebrow{color:var(--blue)}
+h2{font-size:clamp(28px,3.2vw,40px);line-height:1.15;font-weight:700;letter-spacing:-.015em;color:var(--navy);margin:0 0 16px}
+.section-head p{color:var(--muted);margin:0;font-size:17px}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{border:1px solid var(--line);border-radius:14px;padding:32px;background:var(--white)}
+.card .ico{width:48px;height:48px;border-radius:10px;background:var(--bg-soft);display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--blue)}
+.card .ico svg{width:24px;height:24px}
+.card h3{font-size:20px;font-weight:600;color:var(--navy);margin:0 0 10px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+
+.about{background:var(--bg-soft)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:64px;align-items:center}
+.about-grid img{width:min(320px,100%);margin:0 auto}
+.about p{font-size:17px;color:var(--muted);margin:0 0 18px}
+.about p:last-child{margin-bottom:0}
+
+.contact{background:var(--navy);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact .section-head p{color:#C9D3E3}
+.contact .section-head .eyebrow{color:var(--cyan)}
+.contact-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;list-style:none;margin:0;padding:0}
+.contact-list li{border:1px solid #23396B;border-radius:14px;padding:26px}
+.contact-list .label{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9FB0CC;margin-bottom:8px}
+.contact-list a,.contact-list span.val{color:var(--white);font-size:18px;font-weight:600;text-decoration:none;word-break:break-word}
+.contact-list a:hover{color:var(--cyan)}
+
+footer{background:#081639;color:#9FB0CC;font-size:14px;padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:800px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  section{padding:72px 0}
+  .hero{padding:48px 0 80px}
+  .nav ul{gap:20px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a href="./" aria-label="AV360 Media home"><img src="assets/logo-reversed.svg" alt="AV360 Media" width="141" height="47"></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Live event audio visual</p>
+      <h1>Live event AV, from planning to show call.</h1>
+      <p class="lead">AV360 Media is the independent production company of Bryan Horton, providing audio visual production, high-end video operation and project management for live events.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:bhorton@av360media.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          Email Bryan
+        </a>
+        <a class="btn btn-ghost" href="tel:+14805329044">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+          (480) 532-9044
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">What AV360 Media does</h2>
+        <p>Support for corporate meetings, conferences and live events, scaled to the show.</p>
+      </div>
+      <div class="services">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></div>
+          <h3>Audio Visual Production</h3>
+          <p>Full event AV planning and execution for meetings, conferences and live events.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/><path d="m10 8 5 2.5-5 2.5z"/></svg></div>
+          <h3>Video Operation</h3>
+          <p>High-end video switching, playback and graphics for in-room and hybrid audiences.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3v2h6V3"/><path d="m8.5 12 2 2 4-4"/><path d="M8.5 17h7"/></svg></div>
+          <h3>Project Management</h3>
+          <p>Budgets, crew, vendors and schedules, managed from the first call to load-out.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <img src="assets/icon.svg" alt="" width="320" height="320">
+      <div>
+        <p class="eyebrow" style="color:var(--blue);margin-bottom:18px">About</p>
+        <h2 id="about-title">End-to-end AV support</h2>
+        <p>AV360 Media provides end-to-end audio visual support for corporate meetings, conferences and live events.</p>
+        <p>Led by Bryan Horton, AV360 Media works directly with clients and production teams to plan, staff and run every part of the show, from pre-production and logistics through to the final cue.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Planning an event?</h2>
+        <p>Reach out with your dates, venue and what you need, and Bryan will get back to you.</p>
+      </div>
+      <ul class="contact-list">
+        <li><span class="label">Email</span><a href="mailto:bhorton@av360media.com">bhorton@av360media.com</a></li>
+        <li><span class="label">Phone</span><a href="tel:+14805329044">(480) 532-9044</a></li>
+        <li><span class="label">Based in</span><span class="val">Gilbert, Arizona</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> AV360 Media LLC</span>
+    <span>Gilbert, Arizona</span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
