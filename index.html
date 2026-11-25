@@ -109,6 +109,8 @@ h2{font-size:clamp(30px,3.4vw,44px);line-height:1.1;font-weight:500;letter-spaci
 .shot img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;transition:transform .5s ease}
 .shot button:hover img{transform:scale(1.03)}
 .shot figcaption{font-size:14px;color:var(--muted);margin-top:12px}
+.shot.pano{grid-column:span 2}
+.shot.pano img{aspect-ratio:3.1/1}
 
 .about p{margin:0 0 20px;color:var(--ink-2);font-size:19px;line-height:1.6;max-width:58ch}
 .about p.big{font-size:clamp(22px,2.2vw,28px);line-height:1.4;color:var(--ink);letter-spacing:-.015em}
@@ -162,6 +164,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .facts{grid-template-columns:1fr}
   .facts li{padding:20px 0;border-bottom:1px solid var(--line)}
   .gallery{grid-template-columns:1fr}
+  .shot.pano{grid-column:auto}.shot.pano img{aspect-ratio:3/2}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
@@ -264,11 +267,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <figure class="shot"><button type="button" aria-label="View larger: Wide LED wall stage in a dark ballroom, Dallas, TX"><img src="assets/work/work-04-sm.jpg" data-full="assets/work/work-04.jpg" data-city="Dallas, TX" alt="Wide LED wall stage in a dark ballroom" loading="lazy" width="800" height="533"></button><figcaption>Dallas, TX</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: Three LED walls with moving light beams over a gala room, Aurora, CO"><img src="assets/work/work-05-sm.jpg" data-full="assets/work/work-05.jpg" data-city="Aurora, CO" alt="Three LED walls with moving light beams over a gala room" loading="lazy" width="800" height="533"></button><figcaption>Aurora, CO</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: Curved projection screens on a ballroom stage, Salt Lake City, UT"><img src="assets/work/work-06-sm.jpg" data-full="assets/work/work-06.jpg" data-city="Salt Lake City, UT" alt="Curved projection screens on a ballroom stage" loading="lazy" width="800" height="533"></button><figcaption>Salt Lake City, UT</figcaption></figure>
-        <figure class="shot"><button type="button" aria-label="View larger: Long LED wall spanning a ballroom, Nassau, Bahamas"><img src="assets/work/work-07-sm.jpg" data-full="assets/work/work-07.jpg" data-city="Nassau, Bahamas" alt="Long LED wall spanning a ballroom" loading="lazy" width="800" height="533"></button><figcaption>Nassau, Bahamas</figcaption></figure>
+        <figure class="shot pano"><button type="button" aria-label="View larger: Long LED wall spanning a ballroom, Nassau, Bahamas"><img src="assets/work/work-07-sm.jpg" data-full="assets/work/work-07.jpg" data-city="Nassau, Bahamas" alt="Long LED wall spanning a ballroom" loading="lazy" width="800" height="533"></button><figcaption>Nassau, Bahamas</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: General session with a center stage and side screens, Orlando, FL"><img src="assets/work/work-08-sm.jpg" data-full="assets/work/work-08.jpg" data-city="Orlando, FL" alt="General session with a center stage and side screens" loading="lazy" width="800" height="533"></button><figcaption>Orlando, FL</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: Gala ballroom with LED walls and IMAG screens, Mesa, AZ"><img src="assets/work/work-14-sm.jpg" data-full="assets/work/work-14.jpg" data-city="Mesa, AZ" alt="Gala ballroom with LED walls and IMAG screens" loading="lazy" width="800" height="533"></button><figcaption>Mesa, AZ</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: General session with an LED wall and overhead lighting rig, Boca Raton, FL"><img src="assets/work/work-09-sm.jpg" data-full="assets/work/work-09.jpg" data-city="Boca Raton, FL" alt="General session with an LED wall and overhead lighting rig" loading="lazy" width="800" height="533"></button><figcaption>Boca Raton, FL</figcaption></figure>
         <figure class="shot"><button type="button" aria-label="View larger: Video operator desk with multiviewers and playback system, Huntington Beach, CA"><img src="assets/work/work-10-sm.jpg" data-full="assets/work/work-10.jpg" data-city="Huntington Beach, CA" alt="Video operator desk with multiviewers and playback system" loading="lazy" width="800" height="533"></button><figcaption>Huntington Beach, CA</figcaption></figure>
+        <figure class="shot"><button type="button" aria-label="View larger: Tech table at the back of a full general session, New Brunswick, NJ"><img src="assets/work/work-11-sm.jpg" data-full="assets/work/work-11.jpg" data-city="New Brunswick, NJ" alt="Tech table at the back of a full general session" loading="lazy" width="800" height="533"></button><figcaption>New Brunswick, NJ</figcaption></figure>
+        <figure class="shot"><button type="button" aria-label="View larger: Presentation in a glass-walled event space with city views, Chicago, IL"><img src="assets/work/work-12-sm.jpg" data-full="assets/work/work-12.jpg" data-city="Chicago, IL" alt="Presentation in a glass-walled event space with city views" loading="lazy" width="800" height="533"></button><figcaption>Chicago, IL</figcaption></figure>
       </div>
     </div>
   </section>
