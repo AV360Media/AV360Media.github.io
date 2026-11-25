@@ -36,7 +36,11 @@ a{color:inherit}
 .label{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 16px}
 
 /* navy band holding header + hero */
-.band{background:var(--navy);color:#fff;padding-bottom:220px}
+.band{position:relative;isolation:isolate;overflow:hidden;background:#070E24;color:#fff;padding-bottom:220px}
+.band .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;z-index:-2}
+.band::before{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(7,14,36,.78) 0%,rgba(7,14,36,.25) 22%,rgba(7,14,36,0) 40%,rgba(7,14,36,0) 56%,rgba(11,31,77,.72) 78%,var(--navy) 100%),
+  radial-gradient(ellipse 70% 60% at 50% 48%,transparent 55%,rgba(7,14,36,.55) 100%)}
 header.top{padding:28px 0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .nav img{height:56px;width:auto}
@@ -45,10 +49,12 @@ header.top{padding:28px 0}
 .nav a{text-decoration:none;font-size:15px;color:#C2CBDB}
 .nav a:hover{color:#fff}
 
-.hero{padding:72px 0 72px}
-.hero h1{font-size:clamp(40px,5.6vw,76px);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin:0;max-width:19ch}
-.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-top:40px;flex-wrap:wrap}
-.hero-foot p{margin:0;max-width:46ch;color:#C2CBDB;font-size:18px}
+.hero{min-height:clamp(620px,92vh,980px);display:flex;flex-direction:column;justify-content:space-between;text-align:center;padding:40px 0 64px}
+.hero > .wrap{display:contents}
+.hero h1{font-size:clamp(40px,5.4vw,78px);line-height:1.04;font-weight:500;letter-spacing:-.035em;margin:0 auto;max-width:20ch;padding:0 24px;text-shadow:0 2px 24px rgba(4,10,30,.55)}
+.hero-foot{display:flex;flex-direction:column;align-items:center;gap:26px;padding:0 24px}
+.hero-foot p{margin:0;max-width:52ch;color:#DCE3F0;font-size:18px;text-shadow:0 1px 14px rgba(4,10,30,.7)}
+.btn-line{backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);background:rgba(255,255,255,.06)}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .btn-dark{box-shadow:0 6px 18px -8px rgba(0,0,0,.45)}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;transition:background .15s,color .15s,border-color .15s}
@@ -139,6 +145,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .contact-box{padding:48px 32px}
   section{padding-top:96px}
   .band{padding-bottom:180px}.feature{margin-top:-180px}
+  .hero{min-height:640px}
   #work{margin-top:96px;padding:88px 0}
 }
 @media (max-width:600px){
@@ -149,6 +156,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .mosaic{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:88px;gap:4px;padding:4px}
   .mosaic .ml{display:none}
   .band{padding-bottom:140px}.feature{margin-top:-140px}
+  .hero{min-height:600px;padding-bottom:48px}
+  .band .bg{object-position:center 42%}
   .facts{grid-template-columns:1fr}
   .facts li{padding:20px 0;border-bottom:1px solid var(--line)}
   .gallery{grid-template-columns:1fr}
@@ -160,6 +169,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="band">
+<picture><source media="(max-width:700px)" srcset="assets/hero-sm.jpg"><img class="bg" src="assets/hero.jpg" alt="" width="2400" height="2432" fetchpriority="high"></picture>
 <header class="top">
   <div class="wrap nav">
     <a href="./" aria-label="AV360 Media home"><img src="assets/logo-reversed.svg" alt="AV360 Media" width="168" height="56"></a>
