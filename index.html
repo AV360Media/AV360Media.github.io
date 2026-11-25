@@ -36,7 +36,7 @@ a{color:inherit}
 .label{font-size:13px;font-weight:500;color:var(--muted);margin:0 0 16px}
 
 /* navy band holding header + hero */
-.band{position:relative;isolation:isolate;overflow:hidden;background:#070E24;color:#fff;padding-bottom:220px}
+.band{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:#fff;padding-bottom:220px}
 .band .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 72%;z-index:-2}
 .band::before{content:"";position:absolute;inset:0;z-index:-1;background:
   linear-gradient(180deg,rgba(7,14,36,.78) 0%,rgba(7,14,36,.25) 22%,rgba(7,14,36,0) 38%,rgba(7,14,36,0) 62%,rgba(11,31,77,.78) 84%,var(--navy) 100%),
@@ -164,6 +164,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .gallery{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+@media (min-width:901px){
+  .band .bg{height:auto;top:calc(170px - 27.4vw);bottom:auto;object-fit:fill}
+  .hero{min-height:calc(39.2vw + 312px);padding-top:100px}
+}
 </style>
 </head>
 <body>
